@@ -1,0 +1,247 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Container/Wrapper */
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #fff;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #3c6e71;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  header a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  header a:hover {
+    color: #d9d9d9;
+  }
+  
+  /* Navigation Styles */
+  nav {
+    background-color: #284b63;
+  }
+  
+  /* Mobile menu - stacked */
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  nav li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  nav a:hover {
+    background-color: #1d3a4e;
+  }
+  
+  /* Main Content Area */
+  main {
+    padding: 1rem;
+  }
+  
+  main h2 {
+    color: #284b63;
+    border-bottom: 2px solid #3c6e71;
+    padding-bottom: 0.5rem;
+  }
+  
+  main h3 {
+    color: #3c6e71;
+  }
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .hero-text {
+    background-color: rgba(40, 75, 99, 0.7);
+    color: white;
+    padding: 1rem;
+  }
+  
+  /* Grid Layout for Content Sections */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .grid-item {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .float-left {
+    margin: 0 1rem 1rem 0;
+  }
+  
+  .float-right {
+    margin: 0 0 1rem 1rem;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #284b63;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    clear: both;
+  }
+  
+  footer a {
+    color: #d9d9d9;
+  }
+  
+  /* Form Styles */
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  input[type="submit"] {
+    background-color: #3c6e71;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #284b63;
+  }
+  
+  /* Table Styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  
+  th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #284b63;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Responsive Design for Tablet and Desktop */
+  @media (min-width: 768px) {
+    /* Navigation becomes horizontal */
+    nav ul {
+      flex-direction: row;
+      justify-content: center;
+    }
+    
+    nav a {
+      border-bottom: none;
+    }
+    
+    /* 2-column grid */
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Float images on larger screens */
+    .float-left {
+      float: left;
+    }
+    
+    .float-right {
+      float: right;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    /* 3-column grid for large screens */
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Two-column layout with sidebar */
+    .two-column {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.5rem;
+    }
+  }
